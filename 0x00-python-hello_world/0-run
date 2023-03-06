@@ -1,0 +1,4 @@
+#!/usr/bin/bash
+
+chmod u+x $PYFILE; ./$PYFILE
+chmod u-x $PYFILE
