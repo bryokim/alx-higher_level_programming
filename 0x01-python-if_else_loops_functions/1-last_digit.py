@@ -2,14 +2,13 @@
 import random
 number = random.randint(-10000, 10000)
 
-str = "Last digit of {:d} is ".format(number)
+str = f"Last digit of {number:d} is "
 last_digit = abs(number) % 10
 
 if number < 0 and last_digit != 0:
-    str += "-{:d} ".format(last_digit)
-else:
-    str += "{:d} ".format(last_digit)
+    last_digit *= -1
 
+str += f"{last_digit:d} "
 
 if last_digit > 5:
     str += "and is greater than 5"
