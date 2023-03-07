@@ -13,6 +13,6 @@
 
 ### [0x01-python-if_else_loops_functions](./0x01-python-if_else_loops_functions)
 
-  Contains various Python scripts dealing with lopps and if...else. Also has contains C
+  Contains various Python scripts dealing with loops and if...else. Also contains C
   source file for inserting new node into a sorted linked list.
   
