@@ -26,7 +26,7 @@ Prints the ASCII alphabet except the letters `e` and `q`, in lowercase, not foll
 
 Prints all numbers from `0` to `98` in decimal and in hexadecimal.
 
-``` Python
+```text
 0 = 0x0
 1 = 0x1
 2 = 0x2
