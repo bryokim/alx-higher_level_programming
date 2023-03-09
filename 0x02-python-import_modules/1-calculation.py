@@ -14,10 +14,10 @@ def perform_operations(a: int, b: int):
         b: second integer
 
     """
-    print(f"{a} + {b} = {calc.add(a, b)}")
-    print(f"{a} - {b} = {calc.sub(a, b)}")
-    print(f"{a} * {b} = {calc.mul(a, b)}")
-    print(f"{a} / {b} = {calc.div(a, b)}")
+    print("{} + {} = {}".format(a, b, calc.add(a, b)))
+    print("{} - {} = {}".format(a, b, calc.sub(a, b)))
+    print("{} * {} = {}".format(a, b, calc.mul(a, b)))
+    print("{} / {} = {}".format(a, b, calc.div(a, b)))
 
 
 if __name__ == '__main__':
