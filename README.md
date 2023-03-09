@@ -16,3 +16,7 @@
   Contains various Python scripts dealing with loops and if...else. Also contains C
   source file for inserting new node into a sorted linked list.
   
+### [0x02-python-import_modules](./0x02-python-import_modules/)
+
+  Contains various Python scripts dealing with importation and modules.
+  
