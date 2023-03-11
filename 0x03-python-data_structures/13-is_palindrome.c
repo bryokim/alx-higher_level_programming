@@ -13,6 +13,7 @@ int size_of_listint(listint_t *head);
  */
 int is_palindrome(listint_t **head)
 {
+	int *arr;
 	int total_size, compare_size, idx;
 	listint_t *node;
 
@@ -22,7 +23,9 @@ int is_palindrome(listint_t **head)
 		return (1);
 
 	compare_size = total_size / 2;
-	int arr[compare_size];
+	arr = malloc(compare_size * sizeof(int));
+	if (!arr)
+		return (-1);
 
 	for (idx = 0; idx < compare_size; idx++)
 	{
@@ -35,9 +38,13 @@ int is_palindrome(listint_t **head)
 	for (idx = compare_size - 1; idx >= 0; idx--)
 	{
 		if (arr[idx] != node->n)
+		{
+			free(arr);
 			return (0);
+		}
 		node = node->next;
 	}
+	free(arr);
 	return (1);
 }
 
