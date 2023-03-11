@@ -1,8 +1,9 @@
 #!/usr/bin/python3
 
+
 def multiple_returns(sentence):
     length = len(sentence)
-    first_char = ''
+    first_char = ""
 
     if length != 0:
         first_char = sentence[0]
