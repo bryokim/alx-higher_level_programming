@@ -11,7 +11,6 @@
 void print_python_list_info(PyObject *p)
 {
 	long int idx, len;
-	PyObject *item;
 	PyListObject *obj;
 
 	obj = (PyListObject *)p;
