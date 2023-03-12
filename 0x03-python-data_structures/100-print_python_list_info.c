@@ -10,7 +10,7 @@
  */
 void print_python_list_info(PyObject *p)
 {
-	Py_ssize_t idx, len;
+	long int idx, len;
 	PyObject *item;
 	PyListObject *obj;
 
@@ -21,8 +21,5 @@ void print_python_list_info(PyObject *p)
 	printf("[*] Allocated = %ld\n", obj->allocated);
 
 	for (idx = 0; idx < len; idx++)
-	{
-		item = PyList_GetItem(p, idx);
-		printf("Element %ld: %s\n", idx, Py_TYPE(item)->tp_name);
-	}
+		printf("Element %ld: %s\n", idx, Py_TYPE(obj->ob_item[idx])->tp_name);
 }
