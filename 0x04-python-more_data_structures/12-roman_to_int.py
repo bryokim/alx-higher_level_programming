@@ -16,7 +16,7 @@ def roman_to_int(roman_string):
     if not roman_string or roman_string is None:
         return integer
 
-    roman_string = roman_string.upper()
+    roman_string = roman_string.upper().strip()
     for current, next in zip(roman_string, roman_string[1:]):
         current_value = roman_values.get(current)
         next_value = roman_values.get(next)
