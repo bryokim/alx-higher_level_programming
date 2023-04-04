@@ -1,0 +1,40 @@
+The ``3-say_my_name`` module test file
+======================================
+
+Using ``say_my_name`` function:
+-------------------------------
+
+Import ``say_my_name``:
+
+    >>> say_my_name = __import__('3-say_my_name').say_my_name
+
+Test with valid values:
+
+    >>> # Single name. There's space after the name when its printed.
+    >>> say_my_name("Brian")
+    My name is Brian 
+
+    >>> # Both names. No space after second name when printing.
+    >>> say_my_name("Brian", "Kimathi")
+    My name is Brian Kimathi
+
+    >>> names = ["Brian", "Kimathi"]
+    >>> say_my_name(names[0],names[1])
+    My name is Brian Kimathi
+
+Test with invalid names:
+
+    >>> say_my_name(1)
+    Traceback (most recent call last):
+        ...
+    TypeError: first_name must be a string
+
+    >>> say_my_name("Brian", 2)
+    Traceback (most recent call last):
+        ...
+    TypeError: last_name must be a string
+
+    >>> say_my_name([1], "Kim")
+    Traceback (most recent call last):
+        ...
+    TypeError: first_name must be a string

@@ -1,0 +1,52 @@
+The ``5-text_indentation`` module test file
+============================================
+
+Using the ``text_indentation`` function:
+----------------------------------------
+
+Import the function:
+
+    >>> text_indentation = __import__('5-text_indentation').text_indentation
+
+Test with valid string:
+
+    >>> my_str = "My name is What. \
+    ... I am from Where in the middle \
+    ... of NoWhere.\
+    ... How do you know me? \
+    ... I am not that famous: am I? "
+
+    >>> text_indentation(my_str)
+    My name is What.
+    <BLANKLINE>
+    I am from Where in the middle of NoWhere.
+    <BLANKLINE>
+    How do you know me?
+    <BLANKLINE>
+    I am not that famous:
+    <BLANKLINE>
+    am I?
+    <BLANKLINE>
+
+    >>> my_str1 = """This is a new test.  \
+    ... How can I test this without having \
+    ... to do all that work?How is that possible?\
+    ... One word: smart"""
+    
+    >>> text_indentation(my_str1)
+    This is a new test.
+    <BLANKLINE>
+    How can I test this without having to do all that work?
+    <BLANKLINE>
+    How is that possible?
+    <BLANKLINE>
+    One word:
+    <BLANKLINE>
+    smart
+
+Test with non-string text:
+
+    >>> text_indentation(1)
+    Traceback (most recent call last):
+        ...
+    TypeError: text must be a string
