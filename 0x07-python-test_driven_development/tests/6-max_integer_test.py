@@ -23,6 +23,10 @@ class TestMaxInteger(unittest.TestCase):
         """Test for an empty list"""
         self.assertEqual(max_integer([]), None)
 
+    def test_one_item_list(self):
+        """Test for a list with only ne item"""
+        self.assertEqual(max_integer([1]), 1)
+
     def test_int_list(self):
         """Test for a list containing integers"""
         self.assertEqual(max_integer(self.int_list), 5)

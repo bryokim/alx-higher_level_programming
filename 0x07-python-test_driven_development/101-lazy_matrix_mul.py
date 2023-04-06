@@ -1,4 +1,4 @@
-#!/usr/bin/pyhon3
+#!/usr/bin/python3
 """Module for finding product of 2 matrices using numpy.
 
     Raises:

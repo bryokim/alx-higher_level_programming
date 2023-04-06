@@ -1,7 +1,19 @@
 #!/usr/bin/python3
+"""
+Module that prints a text with 2 new lines after each of these characters:
+    . or ? or :
+"""
 
 
 def text_indentation(text):
+    """Prints a text with 2 new lines after . or ? or :
+
+    Args:
+        text (str): Tex to be printed.
+
+    Raises:
+        TypeError: If text is not a string.
+    """
     if not isinstance(text, str):
         raise TypeError("text must be a string")
 

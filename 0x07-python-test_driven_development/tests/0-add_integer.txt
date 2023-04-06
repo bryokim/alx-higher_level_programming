@@ -21,7 +21,7 @@ Test for both values given as integers:
     >>> add_integer(1, 100)
     101
 
-Test for both values given ut one is not integer or float:
+Test for both values given but one is not integer or float:
     >>> add_integer("one", 100)
     Traceback (most recent call last):
         ...
