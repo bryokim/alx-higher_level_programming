@@ -1,0 +1,29 @@
+``100-my_int`` module tests
+============================
+
+Using MyInt class:
+------------------
+
+Import class:
+    >>> MyInt = __import__('100-my_int').MyInt
+
+Tests:
+
+    >>> i = MyInt(10)
+    
+    >>> print(i == 10)
+    False
+    >>> print(i != 10)
+    True
+
+    >>> j = MyInt(20)
+
+    >>> print(i == j)
+    True
+    >>> print(i != j)
+    False
+
+    >>> print(i == "ten")
+    True
+    >>> print(i == 10.0)
+    False
