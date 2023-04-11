@@ -37,8 +37,8 @@ Test integer_validator:
 
 	>>> obj.integer_validator("one", -10)
 	Traceback (most recent call last):
-                ...
-        ValueError: one must be greater than 0
+        ...
+    ValueError: one must be greater than 0
 
 	>>> obj.integer_validator("one")
 	Traceback (most recent call last):

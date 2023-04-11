@@ -3,7 +3,7 @@
 
 
 class BaseGeometry:
-    """BaseGeometry Classs"""
+    """BaseGeometry Class"""
 
     def area(self):
         """Raise an exception.
@@ -18,7 +18,7 @@ class BaseGeometry:
 
         Args:
             name (str): String to be assigned value.
-            value(int): The integer being validated.
+            value (int): The integer being validated.
 
         Raises:
             TypeError: If value is not a integer.
