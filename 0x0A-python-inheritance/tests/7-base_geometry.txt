@@ -19,7 +19,7 @@ Test area method:
 	>>> obj.area(1)
 	Traceback (most recent call last):
 		...
-	TypeError: BaseGeometry.area() takes 1 positional argument but 2 were given
+	TypeError: area() takes 1 positional argument but 2 were given
 
 Test integer_validator:
 
@@ -43,9 +43,9 @@ Test integer_validator:
 	>>> obj.integer_validator("one")
 	Traceback (most recent call last):
 		...
-	TypeError: BaseGeometry.integer_validator() missing 1 required positional argument: 'value'
+	TypeError: integer_validator() missing 1 required positional argument: 'value'
 
 	>>> obj.integer_validator()
 	Traceback (most recent call last):
 		...
-	TypeError: BaseGeometry.integer_validator() missing 2 required positional arguments: 'name' and 'value'
+	TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'
