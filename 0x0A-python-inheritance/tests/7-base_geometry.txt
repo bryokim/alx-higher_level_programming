@@ -30,6 +30,31 @@ Test integer_validator:
 		...
 	TypeError: one must be an integer
 
+	>>> obj.integer_validator("one", [1])
+	Traceback (most recent call last):
+		...
+	TypeError: one must be an integer
+
+	>>> obj.integer_validator("one", (1,))
+	Traceback (most recent call last):
+		...
+	TypeError: one must be an integer
+
+	>>> obj.integer_validator("one", True)
+	Traceback (most recent call last):
+		...
+	TypeError: one must be an integer
+
+	>>> obj.integer_validator("one", None)
+	Traceback (most recent call last):
+		...
+	TypeError: one must be an integer
+
+	>>> obj.integer_validator("one", {1, 2})
+	Traceback (most recent call last):
+		...
+	TypeError: one must be an integer
+
 	>>> obj.integer_validator("one", 0)
 	Traceback (most recent call last):
 		...
