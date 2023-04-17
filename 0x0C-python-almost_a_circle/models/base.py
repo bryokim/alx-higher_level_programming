@@ -3,6 +3,8 @@
 Iplementation of the Base class
 """
 import json
+import csv
+import sys
 
 
 class Base:
@@ -105,3 +107,43 @@ class Base:
             return []
         list_dicts = cls.from_json_string(json_string)
         return [cls.create(**dictionary) for dictionary in list_dicts]
+
+    @classmethod
+    def save_to_file_csv(cls, list_objs):
+        """Serealizes in csv.
+
+        Args:
+            list_objs (list): List of instances.
+        """
+        list_dictionaries = [cls.to_dictionary(obj) for obj in list_objs]
+        filename = f"{cls.__name__}.csv"
+        if cls.__name__ == "Square":
+            fields = ["id", "size", "x", "y"]
+        else:
+            fields = ["id", "width", "height", "x", "y"]
+        with open(filename, "w") as csv_file:
+            writer = csv.DictWriter(csv_file, fieldnames=fields)
+            writer.writeheader()
+            writer.writerows(list_dictionaries)
+
+    @classmethod
+    def load_from_file_csv(cls):
+        """Deserializes in csv.
+        Exits if one of th values being read is not an integer
+        """
+        try:
+            filename = f"{cls.__name__}.csv"
+            with open(filename) as csv_file:
+                reader = csv.DictReader(csv_file)
+                loaded_dicts = []
+                for dictionary in reader:
+                    for key, value in dictionary.items():
+                        try:
+                            dictionary[key] = int(value)
+                        except ValueError:
+                            sys.exit(f"{key} must be an integer.\
+Line on csv file: {reader.line_num}")
+                    loaded_dicts.append(dictionary)
+                return [cls.create(**dict) for dict in loaded_dicts]
+        except FileNotFoundError:
+            return []
