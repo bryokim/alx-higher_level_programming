@@ -84,7 +84,10 @@ class Base:
             object: New instance of the class with attributes set using
                 dictionary.
         """
-        obj = cls(1, 1)
+        if cls.__name__ == "Square":
+            obj = cls(1)
+        else:
+            obj = cls(1, 1)
         obj.update(**dictionary)
         return obj
 
