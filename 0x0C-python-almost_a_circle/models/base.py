@@ -8,6 +8,8 @@ import sys
 
 
 class Base:
+    """Base Class implementation."""
+
     __nb_objects = 0
 
     def __init__(self, id=None):
