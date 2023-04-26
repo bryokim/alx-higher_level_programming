@@ -5,6 +5,7 @@ Iplementation of the Base class
 import json
 import csv
 import sys
+import turtle
 
 
 class Base:
@@ -152,3 +153,39 @@ Line on csv file: {reader.line_num}")
                 return [cls.create(**dict) for dict in loaded_dicts]
         except FileNotFoundError:
             return []
+
+    @staticmethod
+    def draw(list_rectangles, list_squares):
+        """Opens a window and draws all the rectangles and squares.
+
+        Args:
+            list_rectangles (list): List of rectangles.
+            list_squares (list): List of squares.
+        """
+        wn = turtle.Screen()
+        wn.bgcolor("light blue")
+        wn.title("Rectangles and squares")
+        t = turtle.Turtle()
+        t.pencolor("black")
+        t.pensize(4)
+        t.penup()
+
+        for rect in list_rectangles:
+            t.goto(rect.x, rect.y)
+            t.pendown()
+            for i in range(2):
+                t.fd(rect.width)
+                t.left(90)
+                t.fd(rect.height)
+                t.left(90)
+            t.penup()
+
+        for square in list_squares:
+            t.goto(square.x, square.y)
+            t.pendown()
+            for i in range(4):
+                t.fd(square.size)
+                t.left(90)
+            t.penup()
+
+        turtle.done()
