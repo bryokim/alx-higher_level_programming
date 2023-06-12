@@ -1,6 +1,6 @@
 #!/usr/bin/node
 
-function secondLargest(arr) {
+function secondLargest (arr) {
   let largest = arr[0];
   let second = 0;
 
