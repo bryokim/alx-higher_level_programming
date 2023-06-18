@@ -19,15 +19,14 @@ def get_named_state():
         "host": "localhost",
         "password": password,
         "user": username,
-        "database": db_name
+        "database": db_name,
     }
 
     conn = MySQLdb.connect(**options)
     cur = conn.cursor()
-    cur.execute(
-        """SELECT * FROM states
-        WHERE name = %s
-        ORDER BY id""", (state_name,))
+    cur.execute("""SELECT * FROM states
+                WHERE name = '{}'
+                ORDER BY id""".format(state_name))
 
     states = cur.fetchall()
 
