@@ -27,7 +27,8 @@ def get_states_start_with_N():
     states = cur.fetchall()
 
     for state in states:
-        print(state)
+        if state[1][0] == 'N':
+            print(state)
 
     cur.close()
     conn.close()
