@@ -20,7 +20,11 @@ if __name__ == "__main__":
     Session = sessionmaker(bind=engine)
     session = Session()
 
-    session.query(State).filter(State.name.like('%a%')).delete()
+    states = session.query(State).filter(State.name.like('%a%')).all()
+
+    for state in states:
+        session.delete(state)
+
     session.commit()
 
     session.close()
