@@ -24,7 +24,7 @@ def get_named_state():
 
     conn = MySQLdb.connect(**options)
     cur = conn.cursor()
-    cur.execute(('SELECT * FROM states WHERE name = \'{}\'\
+    cur.execute(('SELECT * FROM states WHERE name = BINARY \'{}\'\
                  ORDER BY id;').format(state_name))
 
     states = cur.fetchall()
