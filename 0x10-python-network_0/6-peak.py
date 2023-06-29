@@ -11,7 +11,7 @@ def find_peak(list_of_integers):
 def heapify(arr):
     """Heapify an array"""
     size = len(arr)
-    i = size - 1
+    i = (size - 1) // 2 
 
     while i >=0 :
         left = 2 * i + 1
