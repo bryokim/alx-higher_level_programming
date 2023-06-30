@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/python3
 """Takes a URL and displays the value of the X-Request-Id variable
 in the header of the response"""
 
