@@ -10,10 +10,10 @@ request(process.argv[2], (err, res, body) => {
     const done = {};
     for (const todo of todos) {
       if (todo.completed) {
-        done[todo.userId] ? done[todo.userId]++ : done[todo.userId] = 1;
+        done[todo.userId] ? done[todo.userId]++ : (done[todo.userId] = 1);
       }
     }
 
-    console.log(done);
+    if (done) console.log(done);
   }
 });
